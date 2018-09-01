@@ -1,5 +1,5 @@
 //
-//  JsonStoreTests.swift
+//  MemStoreTests.swift
 //  MuseumMediaTests
 //
 //  Created by Bruce McTigue on 8/20/18.
@@ -9,25 +9,26 @@
 import XCTest
 @testable import MuseumMedia
 
-class JsonStoreTests: XCTestCase {
+class MemStoreTests: XCTestCase {
     
-    var urlString = Constants.jsonUrl + "/\(MemStore.item.id)"
-    var store: JsonStore!
+    var store: MemStore!
     var jsonItem: Item!
     
     override func setUp() {
-        self.store = JsonStore(urlString:urlString)
+        self.store = MemStore(urlString: nil)
     }
     
     func testFetchItem() {
         let expectation = self.expectation(description: "FetchItem")
         
         self.store.fetchItem(urlString: store.urlString, completionHandler: { (item,error) in
-            self.jsonItem = item
-            expectation.fulfill()
+            if error == nil {
+                self.jsonItem = item
+                expectation.fulfill()
+            }
         })
         
-        waitForExpectations(timeout: 5.0, handler: nil)
-        XCTAssertNotNil(jsonItem)
+        waitForExpectations(timeout: 3.0, handler: nil)
+        XCTAssertTrue(jsonItem.id == MemStore.item.id)
     }
 }

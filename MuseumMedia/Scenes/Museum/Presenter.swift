@@ -9,7 +9,7 @@
 import Foundation
 
 protocol PresentationLogic: class {
-    func presentFetchedItems(response: MuseumMedia.FetchItems.Response)
+    func presentFetchedItem(response: MuseumMedia.FetchItem.Response)
 }
 
 class Presenter: PresentationLogic {
@@ -19,13 +19,10 @@ class Presenter: PresentationLogic {
         self.viewController = controller
     }
     
-    func presentFetchedItems(response: MuseumMedia.FetchItems.Response) {
-        var displayed: [MuseumMedia.FetchItems.ViewModel.DisplayedItem] = []
-        for item in response.items {
-            let displayedItem = MuseumMedia.FetchItems.ViewModel.DisplayedItem(title: item.title, imageUrl: item.imageUrl, description: item.itemDescription)
-            displayed.append(displayedItem)
-        }
-        let viewModel = MuseumMedia.FetchItems.ViewModel(displayedItems: displayed)
-        viewController?.displayFetchedItems(viewModel: viewModel)
+    func presentFetchedItem(response: MuseumMedia.FetchItem.Response) {
+        let item = response.item
+        let displayedItem = MuseumMedia.FetchItem.ViewModel.DisplayedItem(name: item.name, url: item.url)
+        let viewModel = MuseumMedia.FetchItem.ViewModel(displayedItem: displayedItem)
+        viewController?.displayFetchedItem(viewModel: viewModel)
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 protocol BusinessLogic: class {
-    func fetchItems(request: MuseumMedia.FetchItems.Request)
+    func fetchItem(request: MuseumMedia.FetchItem.Request)
 }
 
 class Interactor: BusinessLogic {
@@ -22,10 +22,10 @@ class Interactor: BusinessLogic {
         self.worker = Worker(store: store)
     }
     
-    func fetchItems(request: MuseumMedia.FetchItems.Request) {
-        worker.fetchItems { (items) in
-            let response = MuseumMedia.FetchItems.Response(items: items)
-            self.presenter.presentFetchedItems(response: response)
+    func fetchItem(request: MuseumMedia.FetchItem.Request) {
+        worker.fetchItem { item in
+            let response = MuseumMedia.FetchItem.Response(item: item)
+            self.presenter.presentFetchedItem(response: response)
         }
     }
 }

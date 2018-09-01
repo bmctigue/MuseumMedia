@@ -11,19 +11,14 @@ import XCTest
 
 class ItemTests: XCTestCase {
     
-    static let title = "Item one"
-    static let imageUrl = "https://www.google.com"
-    static let itemDescription = "Item one description"
-    
     var item: Item!
     
     override func setUp() {
         super.setUp()
-        self.item = Item(title: ItemTests.title, imageUrl: ItemTests.imageUrl, itemDescription: ItemTests.itemDescription)
     }
     
     func testShowInit() {
-        let testItem = Item(title: ItemTests.title, imageUrl: ItemTests.imageUrl, itemDescription: ItemTests.itemDescription)
-        XCTAssert(testItem.title == item.title)
+        let testItem = Item(id: MemStore.id, name: MemStore.name, url: MemStore.url, duration: MemStore.duration, quality: MemStore.quality)
+        XCTAssert(testItem.id == MemStore.item.id)
     }
 }

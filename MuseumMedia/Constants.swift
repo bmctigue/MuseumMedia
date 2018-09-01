@@ -10,6 +10,6 @@ import Foundation
 
 class Constants {
     
-    static let jsonUrl = "https://media-rest-service.herokuapp.com"
+    static let jsonUrl = "https://media-rest-service.herokuapp.com/media"
     
 }

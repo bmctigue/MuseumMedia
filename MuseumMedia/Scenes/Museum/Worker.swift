@@ -10,7 +10,7 @@ import Foundation
 
 protocol StoreProtocol: class {
     var urlString: String? { get set }
-    func fetchItems(urlString: String?, completionHandler: @escaping ([Item], StoreError?) -> Void)
+    func fetchItem(urlString: String?, completionHandler: @escaping (Item, StoreError?) -> Void)
 }
 
 class Worker {
@@ -21,17 +21,16 @@ class Worker {
         self.store = store
     }
     
-    func fetchItems(completionHandler: @escaping ([Item]) -> Void) {
-        store.fetchItems(urlString: store.urlString) { (items, error) in
+    func fetchItem(completionHandler: @escaping (Item) -> Void) {
+        store.fetchItem(urlString: store.urlString) { (item, error) in
             guard error == nil else {
                 DispatchQueue.main.async {
                     print(error!.localizedDescription)
-                    completionHandler([])
                 }
                 return
             }
             DispatchQueue.main.async {
-                completionHandler(items)
+                completionHandler(item)
             }
         }
     }

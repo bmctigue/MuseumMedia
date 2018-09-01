@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class JsonStore: StoreProtocol {
     var urlString: String?
@@ -15,7 +16,7 @@ class JsonStore: StoreProtocol {
         self.urlString = urlString
     }
     
-    func fetchItems(urlString: String?, completionHandler: @escaping ([Item], StoreError?) -> Void) {
+    func fetchItem(urlString: String?, completionHandler: @escaping (Item, StoreError?) -> Void) {
         if let urlString = urlString {
             guard let url = URL(string: urlString) else { return }
             URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -25,8 +26,18 @@ class JsonStore: StoreProtocol {
                 
                 guard let data = data else { return }
                 do {
-                    let items = try JSONDecoder().decode([Item].self, from: data)
-                    completionHandler(items, nil)
+                    let json = try JSON(data: data)
+                    let id = json["id"]
+                    if let itemData = id.first {
+                        let itemHash = itemData.1
+                        let id = itemHash["id"].string ?? ""
+                        let name = itemHash["name"].string ?? ""
+                        let url = itemHash["url"].string ?? ""
+                        let duration = itemHash["duration"].intValue
+                        let quality = itemHash["quality"].string ?? ""
+                        let item = Item(id: id, name: name, url: url, duration: duration, quality: quality)
+                        completionHandler(item, nil)
+                    }
                     
                 } catch let jsonError {
                     print(jsonError)

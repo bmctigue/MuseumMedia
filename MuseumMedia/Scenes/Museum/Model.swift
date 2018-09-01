@@ -8,8 +8,16 @@
 
 import Foundation
 
-struct Item: Codable {
-    var title: String
-    var imageUrl: String
-    var itemDescription: String
+typealias MediaId = String
+
+struct Item: Codable, Equatable {
+    var id: MediaId
+    var name: String
+    var url: String
+    var duration: Int
+    var quality: String
+    
+    static func == (lhs: Item, rhs: Item) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

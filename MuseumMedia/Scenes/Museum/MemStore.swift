@@ -8,21 +8,14 @@
 
 import Foundation
 
-class MemStore: StoreProtocol {
-
-    static let title01 = "Space Keybaord Question"
-    static let title02 = "Jiji"
+class MemStore: StoreProtocol {    
     
-    static let imageUrl01 = "https://triplebyte-cats.s3.amazonaws.com/space.jpg"
-    static let imageUrl02 = "https://triplebyte-cats.s3.amazonaws.com/jiji.png"
-    
-    static let description01 = "In space, no one can hear you purr."
-    static let description02 = "You'd think they'd never seen a girl and a cat on a broom before"
-
-    static let items: [Item] = [
-        Item(title: title01, imageUrl: imageUrl01, itemDescription: description01),
-        Item(title: title02, imageUrl: imageUrl02, itemDescription: description02)
-    ]
+    static let id = "b4c4a8da-ba8d-4b3d-8ec2-70e3b69667af"
+    static let name = "media-item-1"
+    static let url = "https://s3-us-west-2.amazonaws.com/mediacore-bucket/Beija_Flor_na_Chuva.mp4"
+    static let duration = 5
+    static let quality = "auto"
+    static let item = Item(id: id, name: name, url: url, duration: duration, quality: quality)
     
     var urlString: String?
     
@@ -30,7 +23,7 @@ class MemStore: StoreProtocol {
         self.urlString = urlString
     }
     
-    func fetchItems(urlString: String?, completionHandler: @escaping ([Item], StoreError?) -> Void) {
-        completionHandler(type(of: self).items, nil)
+    func fetchItem(urlString: String?, completionHandler: @escaping (Item, StoreError?) -> Void) {
+        completionHandler(type(of: self).item, nil)
     }
 }

@@ -12,21 +12,28 @@ protocol Displayable: class {
     var builder: Builder? { get set }
     var interactor: BusinessLogic? { get set }
     func fetch()
-    func displayFetchedItems(viewModel: MuseumMedia.FetchItems.ViewModel)
+    func displayFetchedItem(viewModel: MuseumMedia.FetchItem.ViewModel)
 }
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, Displayable {
+    
+    var builder: Builder?
+    var interactor: BusinessLogic?
+     var displayedItem: MuseumMedia.FetchItem.ViewModel.DisplayedItem?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.builder = Builder(viewController: self)
+        fetch()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func fetch() {
+        let request = MuseumMedia.FetchItem.Request()
+        interactor?.fetchItem(request: request)
     }
-
-
+    
+    func displayFetchedItem(viewModel: MuseumMedia.FetchItem.ViewModel) {
+        displayedItem = viewModel.displayedItem
+    }
 }
 

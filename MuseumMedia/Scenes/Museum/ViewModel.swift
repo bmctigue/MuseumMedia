@@ -9,18 +9,17 @@
 import Foundation
 
 enum MuseumMedia {
-    enum FetchItems {
+    enum FetchItem {
         struct Request {}
         struct Response {
-            var items: [Item]
+            var item: Item
         }
         struct ViewModel {
             struct DisplayedItem {
-                var title: String
-                var imageUrl: String
-                var description: String
+                var name: String
+                var url: String
             }
-            var displayedItems: [DisplayedItem]
+            var displayedItem: DisplayedItem
         }
     }
 }

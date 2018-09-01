@@ -26,9 +26,9 @@
 		A8D76FD1213AF16100A49A6D /* JsonStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D76FCD213AF16000A49A6D /* JsonStoreTests.swift */; };
 		A8D76FD2213AF16100A49A6D /* ItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D76FCE213AF16100A49A6D /* ItemTests.swift */; };
 		A8D76FD3213AF16100A49A6D /* ItemInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D76FCF213AF16100A49A6D /* ItemInteractorTests.swift */; };
-		A8D76FD4213AF16100A49A6D /* MemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D76FD0213AF16100A49A6D /* MemTests.swift */; };
 		A8D76FD6213AF2FA00A49A6D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D76FD5213AF2FA00A49A6D /* Constants.swift */; };
 		A8D76FD8213AF43C00A49A6D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A8D76FD7213AF43C00A49A6D /* Podfile */; };
+		A8D76FDA213B018300A49A6D /* MemStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D76FD9213B018200A49A6D /* MemStoreTests.swift */; };
 		CA052B625E9091B6AE2D0794 /* Pods_MuseumMediaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559FBDBEE1B5DE9C04FACA31 /* Pods_MuseumMediaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,9 +78,9 @@
 		A8D76FCD213AF16000A49A6D /* JsonStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonStoreTests.swift; sourceTree = "<group>"; };
 		A8D76FCE213AF16100A49A6D /* ItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTests.swift; sourceTree = "<group>"; };
 		A8D76FCF213AF16100A49A6D /* ItemInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemInteractorTests.swift; sourceTree = "<group>"; };
-		A8D76FD0213AF16100A49A6D /* MemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemTests.swift; sourceTree = "<group>"; };
 		A8D76FD5213AF2FA00A49A6D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A8D76FD7213AF43C00A49A6D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		A8D76FD9213B018200A49A6D /* MemStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemStoreTests.swift; sourceTree = "<group>"; };
 		B2F4BAEE9994335ED9797B27 /* Pods-MuseumMediaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuseumMediaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MuseumMediaTests/Pods-MuseumMediaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B523DFAF0FDCE2A732B0F4FB /* Pods-MuseumMedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuseumMedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-MuseumMedia/Pods-MuseumMedia.release.xcconfig"; sourceTree = "<group>"; };
 		CAD72222E189A34FC3A00D31 /* Pods-MuseumMediaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuseumMediaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MuseumMediaTests/Pods-MuseumMediaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,10 +174,10 @@
 		A8D76F9B213AEFCE00A49A6D /* MuseumMediaTests */ = {
 			isa = PBXGroup;
 			children = (
-				A8D76FCF213AF16100A49A6D /* ItemInteractorTests.swift */,
 				A8D76FCE213AF16100A49A6D /* ItemTests.swift */,
+				A8D76FCF213AF16100A49A6D /* ItemInteractorTests.swift */,
+				A8D76FD9213B018200A49A6D /* MemStoreTests.swift */,
 				A8D76FCD213AF16000A49A6D /* JsonStoreTests.swift */,
-				A8D76FD0213AF16100A49A6D /* MemTests.swift */,
 				A8D76F9E213AEFCE00A49A6D /* Info.plist */,
 				A8D76FCC213AF16000A49A6D /* MuseumMediaTests-Bridging-Header.h */,
 			);
@@ -212,9 +212,9 @@
 		A8D76FB9213AF0E500A49A6D /* Museum */ = {
 			isa = PBXGroup;
 			children = (
-				A8D76FBA213AF0E500A49A6D /* MemStore.swift */,
 				A8D76FBB213AF0E500A49A6D /* ViewController.swift */,
 				A8D76FBC213AF0E500A49A6D /* Model.swift */,
+				A8D76FBA213AF0E500A49A6D /* MemStore.swift */,
 				A8D76FBD213AF0E500A49A6D /* JsonStore.swift */,
 				A8D76FBE213AF0E500A49A6D /* ViewModel.swift */,
 				A8D76FBF213AF0E500A49A6D /* Builder.swift */,
@@ -461,9 +461,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8D76FD3213AF16100A49A6D /* ItemInteractorTests.swift in Sources */,
+				A8D76FDA213B018300A49A6D /* MemStoreTests.swift in Sources */,
 				A8D76FD2213AF16100A49A6D /* ItemTests.swift in Sources */,
 				A8D76FD1213AF16100A49A6D /* JsonStoreTests.swift in Sources */,
-				A8D76FD4213AF16100A49A6D /* MemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
