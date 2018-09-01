@@ -4,7 +4,6 @@ platform :ios, '11.0'
 def shared_pods
     use_frameworks!
     pod 'SwiftyJSON'
-    pod "Player"
 end
 
 target 'MuseumMedia' do
