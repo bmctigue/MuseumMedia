@@ -1,0 +1,6 @@
+framework module Pods_MuseumMedia {
+  umbrella header "Pods-MuseumMedia-umbrella.h"
+
+  export *
+  module * { export * }
+}

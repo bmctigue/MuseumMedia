@@ -8,6 +8,13 @@
 
 import UIKit
 
+protocol Displayable: class {
+    var builder: Builder? { get set }
+    var interactor: BusinessLogic? { get set }
+    func fetch()
+    func displayFetchedItems(viewModel: MuseumMedia.FetchItems.ViewModel)
+}
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
