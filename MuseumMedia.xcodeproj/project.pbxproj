@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A8D76F88213AEFCC00A49A6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D76F87213AEFCC00A49A6D /* AppDelegate.swift */; };
+		A8D76F8A213AEFCC00A49A6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D76F89213AEFCC00A49A6D /* ViewController.swift */; };
+		A8D76F8D213AEFCC00A49A6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8D76F8B213AEFCC00A49A6D /* Main.storyboard */; };
+		A8D76F8F213AEFCE00A49A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8D76F8E213AEFCE00A49A6D /* Assets.xcassets */; };
+		A8D76F92213AEFCE00A49A6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8D76F90213AEFCE00A49A6D /* LaunchScreen.storyboard */; };
+		A8D76F9D213AEFCE00A49A6D /* MuseumMediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D76F9C213AEFCE00A49A6D /* MuseumMediaTests.swift */; };
+		A8D76FA8213AEFCE00A49A6D /* MuseumMediaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D76FA7213AEFCE00A49A6D /* MuseumMediaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A8D76F99213AEFCE00A49A6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8D76F7C213AEFCC00A49A6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8D76F83213AEFCC00A49A6D;
+			remoteInfo = MuseumMedia;
+		};
+		A8D76FA4213AEFCE00A49A6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8D76F7C213AEFCC00A49A6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8D76F83213AEFCC00A49A6D;
+			remoteInfo = MuseumMedia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A8D76F84213AEFCC00A49A6D /* MuseumMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuseumMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8D76F87213AEFCC00A49A6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A8D76F89213AEFCC00A49A6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A8D76F8C213AEFCC00A49A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A8D76F8E213AEFCE00A49A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A8D76F91213AEFCE00A49A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A8D76F93213AEFCE00A49A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8D76F98213AEFCE00A49A6D /* MuseumMediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuseumMediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8D76F9C213AEFCE00A49A6D /* MuseumMediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumMediaTests.swift; sourceTree = "<group>"; };
+		A8D76F9E213AEFCE00A49A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8D76FA3213AEFCE00A49A6D /* MuseumMediaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuseumMediaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8D76FA7213AEFCE00A49A6D /* MuseumMediaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumMediaUITests.swift; sourceTree = "<group>"; };
+		A8D76FA9213AEFCE00A49A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A8D76F81213AEFCC00A49A6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8D76F95213AEFCE00A49A6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8D76FA0213AEFCE00A49A6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A8D76F7B213AEFCC00A49A6D = {
+			isa = PBXGroup;
+			children = (
+				A8D76F86213AEFCC00A49A6D /* MuseumMedia */,
+				A8D76F9B213AEFCE00A49A6D /* MuseumMediaTests */,
+				A8D76FA6213AEFCE00A49A6D /* MuseumMediaUITests */,
+				A8D76F85213AEFCC00A49A6D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A8D76F85213AEFCC00A49A6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8D76F84213AEFCC00A49A6D /* MuseumMedia.app */,
+				A8D76F98213AEFCE00A49A6D /* MuseumMediaTests.xctest */,
+				A8D76FA3213AEFCE00A49A6D /* MuseumMediaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A8D76F86213AEFCC00A49A6D /* MuseumMedia */ = {
+			isa = PBXGroup;
+			children = (
+				A8D76F87213AEFCC00A49A6D /* AppDelegate.swift */,
+				A8D76F89213AEFCC00A49A6D /* ViewController.swift */,
+				A8D76F8B213AEFCC00A49A6D /* Main.storyboard */,
+				A8D76F8E213AEFCE00A49A6D /* Assets.xcassets */,
+				A8D76F90213AEFCE00A49A6D /* LaunchScreen.storyboard */,
+				A8D76F93213AEFCE00A49A6D /* Info.plist */,
+			);
+			path = MuseumMedia;
+			sourceTree = "<group>";
+		};
+		A8D76F9B213AEFCE00A49A6D /* MuseumMediaTests */ = {
+			isa = PBXGroup;
+			children = (
+				A8D76F9C213AEFCE00A49A6D /* MuseumMediaTests.swift */,
+				A8D76F9E213AEFCE00A49A6D /* Info.plist */,
+			);
+			path = MuseumMediaTests;
+			sourceTree = "<group>";
+		};
+		A8D76FA6213AEFCE00A49A6D /* MuseumMediaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A8D76FA7213AEFCE00A49A6D /* MuseumMediaUITests.swift */,
+				A8D76FA9213AEFCE00A49A6D /* Info.plist */,
+			);
+			path = MuseumMediaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A8D76F83213AEFCC00A49A6D /* MuseumMedia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8D76FAC213AEFCE00A49A6D /* Build configuration list for PBXNativeTarget "MuseumMedia" */;
+			buildPhases = (
+				A8D76F80213AEFCC00A49A6D /* Sources */,
+				A8D76F81213AEFCC00A49A6D /* Frameworks */,
+				A8D76F82213AEFCC00A49A6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MuseumMedia;
+			productName = MuseumMedia;
+			productReference = A8D76F84213AEFCC00A49A6D /* MuseumMedia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A8D76F97213AEFCE00A49A6D /* MuseumMediaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8D76FAF213AEFCE00A49A6D /* Build configuration list for PBXNativeTarget "MuseumMediaTests" */;
+			buildPhases = (
+				A8D76F94213AEFCE00A49A6D /* Sources */,
+				A8D76F95213AEFCE00A49A6D /* Frameworks */,
+				A8D76F96213AEFCE00A49A6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8D76F9A213AEFCE00A49A6D /* PBXTargetDependency */,
+			);
+			name = MuseumMediaTests;
+			productName = MuseumMediaTests;
+			productReference = A8D76F98213AEFCE00A49A6D /* MuseumMediaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A8D76FA2213AEFCE00A49A6D /* MuseumMediaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8D76FB2213AEFCE00A49A6D /* Build configuration list for PBXNativeTarget "MuseumMediaUITests" */;
+			buildPhases = (
+				A8D76F9F213AEFCE00A49A6D /* Sources */,
+				A8D76FA0213AEFCE00A49A6D /* Frameworks */,
+				A8D76FA1213AEFCE00A49A6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8D76FA5213AEFCE00A49A6D /* PBXTargetDependency */,
+			);
+			name = MuseumMediaUITests;
+			productName = MuseumMediaUITests;
+			productReference = A8D76FA3213AEFCE00A49A6D /* MuseumMediaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8D76F7C213AEFCC00A49A6D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = tiguer;
+				TargetAttributes = {
+					A8D76F83213AEFCC00A49A6D = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					A8D76F97213AEFCE00A49A6D = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = A8D76F83213AEFCC00A49A6D;
+					};
+					A8D76FA2213AEFCE00A49A6D = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = A8D76F83213AEFCC00A49A6D;
+					};
+				};
+			};
+			buildConfigurationList = A8D76F7F213AEFCC00A49A6D /* Build configuration list for PBXProject "MuseumMedia" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A8D76F7B213AEFCC00A49A6D;
+			productRefGroup = A8D76F85213AEFCC00A49A6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8D76F83213AEFCC00A49A6D /* MuseumMedia */,
+				A8D76F97213AEFCE00A49A6D /* MuseumMediaTests */,
+				A8D76FA2213AEFCE00A49A6D /* MuseumMediaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A8D76F82213AEFCC00A49A6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8D76F92213AEFCE00A49A6D /* LaunchScreen.storyboard in Resources */,
+				A8D76F8F213AEFCE00A49A6D /* Assets.xcassets in Resources */,
+				A8D76F8D213AEFCC00A49A6D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8D76F96213AEFCE00A49A6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8D76FA1213AEFCE00A49A6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A8D76F80213AEFCC00A49A6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8D76F8A213AEFCC00A49A6D /* ViewController.swift in Sources */,
+				A8D76F88213AEFCC00A49A6D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8D76F94213AEFCE00A49A6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8D76F9D213AEFCE00A49A6D /* MuseumMediaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8D76F9F213AEFCE00A49A6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8D76FA8213AEFCE00A49A6D /* MuseumMediaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8D76F9A213AEFCE00A49A6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8D76F83213AEFCC00A49A6D /* MuseumMedia */;
+			targetProxy = A8D76F99213AEFCE00A49A6D /* PBXContainerItemProxy */;
+		};
+		A8D76FA5213AEFCE00A49A6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8D76F83213AEFCC00A49A6D /* MuseumMedia */;
+			targetProxy = A8D76FA4213AEFCE00A49A6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A8D76F8B213AEFCC00A49A6D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8D76F8C213AEFCC00A49A6D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A8D76F90213AEFCE00A49A6D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8D76F91213AEFCE00A49A6D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A8D76FAA213AEFCE00A49A6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A8D76FAB213AEFCE00A49A6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A8D76FAD213AEFCE00A49A6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 462PHCYTGY;
+				INFOPLIST_FILE = MuseumMedia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.MuseumMedia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A8D76FAE213AEFCE00A49A6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 462PHCYTGY;
+				INFOPLIST_FILE = MuseumMedia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.MuseumMedia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A8D76FB0213AEFCE00A49A6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 462PHCYTGY;
+				INFOPLIST_FILE = MuseumMediaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.MuseumMediaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuseumMedia.app/MuseumMedia";
+			};
+			name = Debug;
+		};
+		A8D76FB1213AEFCE00A49A6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 462PHCYTGY;
+				INFOPLIST_FILE = MuseumMediaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.MuseumMediaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuseumMedia.app/MuseumMedia";
+			};
+			name = Release;
+		};
+		A8D76FB3213AEFCE00A49A6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 462PHCYTGY;
+				INFOPLIST_FILE = MuseumMediaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.MuseumMediaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MuseumMedia;
+			};
+			name = Debug;
+		};
+		A8D76FB4213AEFCE00A49A6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 462PHCYTGY;
+				INFOPLIST_FILE = MuseumMediaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiguer.MuseumMediaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MuseumMedia;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A8D76F7F213AEFCC00A49A6D /* Build configuration list for PBXProject "MuseumMedia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8D76FAA213AEFCE00A49A6D /* Debug */,
+				A8D76FAB213AEFCE00A49A6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8D76FAC213AEFCE00A49A6D /* Build configuration list for PBXNativeTarget "MuseumMedia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8D76FAD213AEFCE00A49A6D /* Debug */,
+				A8D76FAE213AEFCE00A49A6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8D76FAF213AEFCE00A49A6D /* Build configuration list for PBXNativeTarget "MuseumMediaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8D76FB0213AEFCE00A49A6D /* Debug */,
+				A8D76FB1213AEFCE00A49A6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8D76FB2213AEFCE00A49A6D /* Build configuration list for PBXNativeTarget "MuseumMediaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8D76FB3213AEFCE00A49A6D /* Debug */,
+				A8D76FB4213AEFCE00A49A6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A8D76F7C213AEFCC00A49A6D /* Project object */;
+}
