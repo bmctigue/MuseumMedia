@@ -11,7 +11,7 @@ import Foundation
 protocol StoreProtocol: class {
     var urlString: String? { get set }
     func fetchMediaIds(urlString: String?, completionHandler: @escaping ([MediaId], StoreError?) -> Void)
-    func fetchItem(urlString: String?, completionHandler: @escaping (Item, StoreError?) -> Void)
+    func fetchItem(urlString: String, completionHandler: @escaping (Item, StoreError?) -> Void)
 }
 
 class Worker {
@@ -36,16 +36,19 @@ class Worker {
         }
     }
     
-    func fetchItem(completionHandler: @escaping (Item) -> Void) {
-        store.fetchItem(urlString: store.urlString) { (item, error) in
-            guard error == nil else {
-                DispatchQueue.main.async {
-                    print(error!.localizedDescription)
+    func fetchItem(mediaId: MediaId, completionHandler: @escaping (Item) -> Void) {
+        if let storeUrlString = store.urlString {
+            let urlString = storeUrlString + "/\(mediaId)"
+            store.fetchItem(urlString: urlString) { (item, error) in
+                guard error == nil else {
+                    DispatchQueue.main.async {
+                        print(error!.localizedDescription)
+                    }
+                    return
                 }
-                return
-            }
-            DispatchQueue.main.async {
-                completionHandler(item)
+                DispatchQueue.main.async {
+                    completionHandler(item)
+                }
             }
         }
     }

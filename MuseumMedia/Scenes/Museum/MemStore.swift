@@ -28,7 +28,7 @@ class MemStore: StoreProtocol {
         completionHandler(type(of: self).mediaIds, nil)
     }
     
-    func fetchItem(urlString: String?, completionHandler: @escaping (Item, StoreError?) -> Void) {
+    func fetchItem(urlString: String, completionHandler: @escaping (Item, StoreError?) -> Void) {
         completionHandler(type(of: self).item, nil)
     }
 }

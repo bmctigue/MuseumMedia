@@ -24,8 +24,7 @@ class MediaManager {
             if let item = itemsHash[nextMediaId] {
                 itemQueue.insert(item, at: 0)
             }
-            let request = MuseumMedia.FetchItem.Request(mediaId: nextMediaId)
-            viewController?.interactor?.fetchItem(request: request)
+            viewController?.fetch(mediaId: nextMediaId)
         }
     }
 }

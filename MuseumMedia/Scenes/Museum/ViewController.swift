@@ -36,7 +36,8 @@ class ViewController: UIViewController, Playable {
     }
     
     func updateMediaIds(mediaIds: [MediaId]) {
-        self.mediaManager?.mediaIds = LoopIterator<[MediaId]>(collection: mediaIds)
+        mediaManager?.mediaIds = LoopIterator<[MediaId]>(collection: mediaIds)
+        mediaManager?.nextItem()
     }
     
     func fetch(mediaId: MediaId) {
@@ -46,10 +47,15 @@ class ViewController: UIViewController, Playable {
     
     func displayFetchedItem(viewModel: MuseumMedia.FetchItem.ViewModel) {
         let displayedItem = viewModel.displayedItem
+        mediaManager?.itemQueue.insert(displayedItem, at: 0)
         mediaManager?.itemsHash[displayedItem.id] = displayedItem
+        play()
     }
     
     func play() {
-        
+        if let nextItem = mediaManager?.itemQueue.popLast() {
+            let itemUrl = nextItem.url
+            print(itemUrl)
+        }
     }
 }

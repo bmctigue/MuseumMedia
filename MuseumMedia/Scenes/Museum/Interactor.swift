@@ -31,7 +31,7 @@ class Interactor: BusinessLogic {
     }
     
     func fetchItem(request: MuseumMedia.FetchItem.Request) {
-        worker.fetchItem { item in
+        worker.fetchItem(mediaId: request.mediaId) { item in
             let response = MuseumMedia.FetchItem.Response(item: item)
             self.presenter.presentFetchedItem(response: response)
         }
