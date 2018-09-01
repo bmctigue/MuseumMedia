@@ -9,6 +9,7 @@
 import Foundation
 
 protocol PresentationLogic: class {
+    func updateFetchedMediaIds(response: MuseumMedia.FetchMediaIds.Response)
     func presentFetchedItem(response: MuseumMedia.FetchItem.Response)
 }
 
@@ -17,6 +18,10 @@ class Presenter: PresentationLogic {
     
     init(controller: Displayable) {
         self.viewController = controller
+    }
+    
+    func updateFetchedMediaIds(response: MuseumMedia.FetchMediaIds.Response) {
+        viewController?.updateMediaIds(mediaIds: response.mediaIds)
     }
     
     func presentFetchedItem(response: MuseumMedia.FetchItem.Response) {

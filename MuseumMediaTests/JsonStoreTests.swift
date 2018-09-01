@@ -10,24 +10,23 @@ import XCTest
 @testable import MuseumMedia
 
 class JsonStoreTests: XCTestCase {
-    
-    var urlString = Constants.jsonUrl + "/\(MemStore.item.id)"
+    var itemUrlString = Constants.jsonUrl + "/\(MemStore.item.id)"
     var store: JsonStore!
+    var mediaIds: [MediaId] = []
     var jsonItem: Item!
     
-    override func setUp() {
-        self.store = JsonStore(urlString:urlString)
-    }
-    
-    func testFetchItem() {
-        let expectation = self.expectation(description: "FetchItem")
+    func testFetchMediaIds() {
+        self.mediaIds = []
+        self.store = JsonStore(urlString: nil)
+        store.urlString = Constants.jsonUrl
+        let expectation = self.expectation(description: "FetchMediaIds")
         
-        self.store.fetchItem(urlString: store.urlString, completionHandler: { (item,error) in
-            self.jsonItem = item
+        self.store.fetchMediaIds(urlString: store.urlString, completionHandler: { (mediaIds,error) in
+            self.mediaIds = mediaIds
             expectation.fulfill()
         })
         
         waitForExpectations(timeout: 5.0, handler: nil)
-        XCTAssertNotNil(jsonItem)
+        XCTAssertTrue(self.mediaIds.count > 0)
     }
 }

@@ -12,10 +12,26 @@ import XCTest
 class MemStoreTests: XCTestCase {
     
     var store: MemStore!
+    var mediaIds: [MediaId] = []
     var jsonItem: Item!
     
     override func setUp() {
         self.store = MemStore(urlString: nil)
+        self.mediaIds = []
+    }
+    
+    func testFetchMediaIds() {
+        let expectation = self.expectation(description: "FetchItem")
+        
+        self.store.fetchMediaIds(urlString: store.urlString, completionHandler: { (mediaIds,error) in
+            if error == nil {
+                self.mediaIds = mediaIds
+                expectation.fulfill()
+            }
+        })
+        
+        waitForExpectations(timeout: 3.0, handler: nil)
+        XCTAssertTrue(self.mediaIds.count == MemStore.mediaIds.count)
     }
     
     func testFetchItem() {

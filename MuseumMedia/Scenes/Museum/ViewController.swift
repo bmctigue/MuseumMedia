@@ -11,7 +11,8 @@ import UIKit
 protocol Displayable: class {
     var builder: Builder? { get set }
     var interactor: BusinessLogic? { get set }
-    func fetch()
+    func updateMediaIds(mediaIds: [MediaId])
+    func fetch(mediaId: MediaId)
     func displayFetchedItem(viewModel: MuseumMedia.FetchItem.ViewModel)
 }
 
@@ -19,16 +20,26 @@ class ViewController: UIViewController, Displayable {
     
     var builder: Builder?
     var interactor: BusinessLogic?
-     var displayedItem: MuseumMedia.FetchItem.ViewModel.DisplayedItem?
+    var displayedItem: MuseumMedia.FetchItem.ViewModel.DisplayedItem?
+    var mediaIds: [MediaId] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.builder = Builder(viewController: self)
-        fetch()
+        fetchMediaIds()
     }
     
-    func fetch() {
-        let request = MuseumMedia.FetchItem.Request()
+    func fetchMediaIds() {
+        let request = MuseumMedia.FetchMediaIds.Request()
+        interactor?.fetchMediaIds(request: request)
+    }
+    
+    func updateMediaIds(mediaIds: [MediaId]) {
+        self.mediaIds = mediaIds
+    }
+    
+    func fetch(mediaId: MediaId) {
+        let request = MuseumMedia.FetchItem.Request(mediaId: mediaId)
         interactor?.fetchItem(request: request)
     }
     
@@ -36,4 +47,3 @@ class ViewController: UIViewController, Displayable {
         displayedItem = viewModel.displayedItem
     }
 }
-

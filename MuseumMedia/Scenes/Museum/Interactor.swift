@@ -9,6 +9,7 @@
 import Foundation
 
 protocol BusinessLogic: class {
+    func fetchMediaIds(request: MuseumMedia.FetchMediaIds.Request)
     func fetchItem(request: MuseumMedia.FetchItem.Request)
 }
 
@@ -20,6 +21,13 @@ class Interactor: BusinessLogic {
     init(presenter: PresentationLogic, store: StoreProtocol) {
         self.presenter = presenter
         self.worker = Worker(store: store)
+    }
+    
+    func fetchMediaIds(request: MuseumMedia.FetchMediaIds.Request) {
+        worker.fetchMediaIds { mediaIds in
+            let response = MuseumMedia.FetchMediaIds.Response(mediaIds: mediaIds)
+            self.presenter.updateFetchedMediaIds(response: response)
+        }
     }
     
     func fetchItem(request: MuseumMedia.FetchItem.Request) {

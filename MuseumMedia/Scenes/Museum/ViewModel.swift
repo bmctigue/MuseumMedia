@@ -9,8 +9,17 @@
 import Foundation
 
 enum MuseumMedia {
-    enum FetchItem {
+    enum FetchMediaIds {
         struct Request {}
+        struct Response {
+            var mediaIds: [MediaId]
+        }
+    }
+    
+    enum FetchItem {
+        struct Request {
+            var mediaId: MediaId
+        }
         struct Response {
             var item: Item
         }
