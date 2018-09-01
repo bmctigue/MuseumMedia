@@ -37,7 +37,7 @@ class MemStoreTests: XCTestCase {
     func testFetchItem() {
         let expectation = self.expectation(description: "FetchItem")
         
-        self.store.fetchItem(urlString: store.urlString, completionHandler: { (item,error) in
+        self.store.fetchItem(urlString: MemStore.item.id, completionHandler: { (item,error) in
             if error == nil {
                 self.jsonItem = item
                 expectation.fulfill()

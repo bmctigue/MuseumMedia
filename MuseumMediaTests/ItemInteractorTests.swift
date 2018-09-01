@@ -33,7 +33,7 @@ class ItemInteractorTests: XCTestCase {
     
     class InteractorStub: Interactor {
         override func fetchItem(request: MuseumMedia.FetchItem.Request) {
-            worker?.fetchItem { item -> Void in
+            worker?.fetchItem(mediaId: request.mediaId) { item -> Void in
                 let response = MuseumMedia.FetchItem.Response(item: item)
                 self.presenter?.presentFetchedItem(response: response)
             }
@@ -61,7 +61,7 @@ class ItemInteractorTests: XCTestCase {
     class WorkerSpy: Worker {
         var fetchItemCalled = false
         var updateMediaItemsCalled = false
-        override func fetchItem(completionHandler: @escaping (Item) -> Void) {
+        override func fetchItem(mediaId: MediaId, completionHandler: @escaping (Item) -> Void) {
             fetchItemCalled = true
             completionHandler(MemStore.item)
         }
