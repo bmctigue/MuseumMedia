@@ -8,20 +8,21 @@
 
 import UIKit
 
-protocol Displayable: class {
+protocol Playable: class {
     var builder: Builder? { get set }
     var interactor: BusinessLogic? { get set }
+    var mediaManager: MediaManager? { get set }
     func updateMediaIds(mediaIds: [MediaId])
     func fetch(mediaId: MediaId)
     func displayFetchedItem(viewModel: MuseumMedia.FetchItem.ViewModel)
 }
 
-class ViewController: UIViewController, Displayable {
+class ViewController: UIViewController, Playable {
     
     var builder: Builder?
     var interactor: BusinessLogic?
+    var mediaManager: MediaManager?
     var displayedItem: MuseumMedia.FetchItem.ViewModel.DisplayedItem?
-    var mediaIds: [MediaId] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,7 @@ class ViewController: UIViewController, Displayable {
     }
     
     func updateMediaIds(mediaIds: [MediaId]) {
-        self.mediaIds = mediaIds
+        self.mediaManager?.mediaIds = LoopIterator<[MediaId]>(collection: mediaIds)
     }
     
     func fetch(mediaId: MediaId) {
@@ -44,6 +45,11 @@ class ViewController: UIViewController, Displayable {
     }
     
     func displayFetchedItem(viewModel: MuseumMedia.FetchItem.ViewModel) {
-        displayedItem = viewModel.displayedItem
+        let displayedItem = viewModel.displayedItem
+        mediaManager?.itemsHash[displayedItem.id] = displayedItem
+    }
+    
+    func play() {
+        
     }
 }

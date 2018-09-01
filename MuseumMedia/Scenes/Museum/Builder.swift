@@ -10,13 +10,14 @@ import Foundation
 
 class Builder {
     
-    weak var viewController: Displayable?
+    weak var viewController: Playable?
     
-    init(viewController: Displayable) {
+    init(viewController: Playable) {
         self.viewController = viewController
         let store = JsonStore(urlString: Constants.jsonUrl)
         let presenter = Presenter(controller: viewController)
         let interactor = Interactor(presenter: presenter, store: store)
         viewController.interactor = interactor
+        viewController.mediaManager = MediaManager(controller: viewController)
     }
 }

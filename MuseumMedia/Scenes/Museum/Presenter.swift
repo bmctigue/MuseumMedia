@@ -14,9 +14,9 @@ protocol PresentationLogic: class {
 }
 
 class Presenter: PresentationLogic {
-    weak var viewController: Displayable?
+    weak var viewController: Playable?
     
-    init(controller: Displayable) {
+    init(controller: Playable) {
         self.viewController = controller
     }
     
@@ -26,7 +26,7 @@ class Presenter: PresentationLogic {
     
     func presentFetchedItem(response: MuseumMedia.FetchItem.Response) {
         let item = response.item
-        let displayedItem = MuseumMedia.FetchItem.ViewModel.DisplayedItem(name: item.name, url: item.url)
+        let displayedItem = MuseumMedia.FetchItem.ViewModel.DisplayedItem(id: item.id, name: item.name, url: item.url, duration: item.duration, quality: item.quality)
         let viewModel = MuseumMedia.FetchItem.ViewModel(displayedItem: displayedItem)
         viewController?.displayFetchedItem(viewModel: viewModel)
     }

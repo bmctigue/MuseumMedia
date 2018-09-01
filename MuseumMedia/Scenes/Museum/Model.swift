@@ -10,7 +10,7 @@ import Foundation
 
 typealias MediaId = String
 
-struct Item: Codable, Equatable {
+struct Item: Codable, Equatable, Hashable {
     var id: MediaId
     var name: String
     var url: String

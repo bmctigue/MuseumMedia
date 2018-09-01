@@ -29,6 +29,7 @@
 		A8D76FD6213AF2FA00A49A6D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D76FD5213AF2FA00A49A6D /* Constants.swift */; };
 		A8D76FD8213AF43C00A49A6D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A8D76FD7213AF43C00A49A6D /* Podfile */; };
 		A8D76FDA213B018300A49A6D /* MemStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D76FD9213B018200A49A6D /* MemStoreTests.swift */; };
+		A8D83B00213B373F00AAEE56 /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D83AFF213B373F00AAEE56 /* MediaManager.swift */; };
 		CA052B625E9091B6AE2D0794 /* Pods_MuseumMediaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559FBDBEE1B5DE9C04FACA31 /* Pods_MuseumMediaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		A8D76FD5213AF2FA00A49A6D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A8D76FD7213AF43C00A49A6D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		A8D76FD9213B018200A49A6D /* MemStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemStoreTests.swift; sourceTree = "<group>"; };
+		A8D83AFF213B373F00AAEE56 /* MediaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
 		B2F4BAEE9994335ED9797B27 /* Pods-MuseumMediaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuseumMediaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MuseumMediaTests/Pods-MuseumMediaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B523DFAF0FDCE2A732B0F4FB /* Pods-MuseumMedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuseumMedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-MuseumMedia/Pods-MuseumMedia.release.xcconfig"; sourceTree = "<group>"; };
 		CAD72222E189A34FC3A00D31 /* Pods-MuseumMediaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuseumMediaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MuseumMediaTests/Pods-MuseumMediaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				A8D76FC0213AF0E500A49A6D /* Interactor.swift */,
 				A8D76FC1213AF0E500A49A6D /* Presenter.swift */,
 				A8D76FC2213AF0E500A49A6D /* Worker.swift */,
+				A8D83AFF213B373F00AAEE56 /* MediaManager.swift */,
 			);
 			path = Museum;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 			files = (
 				A8D76FC5213AF0E500A49A6D /* Model.swift in Sources */,
 				A8D76FC3213AF0E500A49A6D /* MemStore.swift in Sources */,
+				A8D83B00213B373F00AAEE56 /* MediaManager.swift in Sources */,
 				A8D76F88213AEFCC00A49A6D /* AppDelegate.swift in Sources */,
 				A8D76FC9213AF0E500A49A6D /* Interactor.swift in Sources */,
 				A8D76FCA213AF0E500A49A6D /* Presenter.swift in Sources */,

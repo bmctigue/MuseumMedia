@@ -25,8 +25,11 @@ enum MuseumMedia {
         }
         struct ViewModel {
             struct DisplayedItem {
+                var id: String
                 var name: String
                 var url: String
+                var duration: Int
+                var quality: String
             }
             var displayedItem: DisplayedItem
         }
